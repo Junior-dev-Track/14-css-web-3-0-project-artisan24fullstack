@@ -1,0 +1,85 @@
+/*! SASS #style main */
+@charset "UTF-8";
+
+@import "./vendors/_variable.scss";
+@import "./vendors/_fontawesome.scss";
+@import "./vendors/_font.scss";
+
+//@import "./base/_accessibilite.scss";
+@import "./base/_base.scss";
+@import "./base/_reset.scss";
+//@import "./base/_typography.scss";
+@import "./base/_boxes.scss";
+//@import "./base/_visibility.scss";
+
+
+@import "./components/_button.scss";
+@import "./components/_hero.scss";
+@import "./components/_cards.scss";
+
+//@import "./layout/_.scss";
+@import "./layout/_header.scss";
+
+
+
+// components css
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: Inter-Font;
+}
+
+main {
+  max-width: 960px;
+  margin: 0rem auto;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 961px) {
+  .backdrop {
+    display: flex !important;
+  }
+}
+
+
+@media (max-width: 960px) {
+
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header,
+  main {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline: 1.5rem;
+  }
+
+  .backdrop {
+    display: none;
+  }
+
+  .backdrop.show {
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #0b0b13ab;
+  }
+
+  .break {
+    display: none;
+  }
+
+
+}
